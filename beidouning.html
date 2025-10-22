@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titre du jeu | Shiraberi</title>
+  <link rel="stylesheet" href="modele-jeu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2e5f77a4a4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="logo">🦊 Shiraberi</div>
+    <nav class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="mes-jeux.html">Mes jeux</a>
+  <a href="shiraberi.html" class="active">Shiraberi</a>
+  <a href="a-propos.html">À propos</a>
+  <a href="lore.html" class="active">Lore</a>
+    </nav>
+  </header>
+
+  <!-- HERO / BANNIÈRE -->
+  <section class="hero">
+    <img src="Ning x bei/Bad_End_BeidouNingguang _crop.png" alt="Bannière du jeu">
+    <div class="overlay">
+      <h1>N'importe où et quand, je t'aimerais!</h1>
+      <p>“Le destin nous unit.”</p>
+    </div>
+  </section>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main>
+    <section class="description">
+      <div class="info">
+        <h2>Résumé</h2>
+        <p>
+          Ce visual novel raconte l’histoire de <b>[Beidou et Ningguang]</b>, deux âmes liées par le destin.
+          Dans une romance passionnée, elles explorent les profondeurs de leur amour à travers des moments intimes et des défis personnels.
+        </p>
+
+        <ul class="details">
+          <li><b>Durée :</b> 15 min environ</li>
+          <li><b>Langue :</b> Français</li>
+          <li><b>Genre :</b> Romance, Slice of Life, R18, SMUT</li>
+          <li><b>Développeur :</b> Équipe Shiraberi</li>
+          <li><b>Licence :</b> Genshin impact</li>
+
+        </ul>
+
+        <a href="Ning x bei/N_importe_où_et_quand_je_t_aimerais!-0.2-web/index.html" target="_blank" class="play-btn">
+          <i class="fa-solid fa-play"></i> Jouer en ligne
+        </a>
+      </div>
+
+      <div class="gallery">
+        <img src="Ning x bei/00.png" alt="Capture 1">
+        <img src="Ning x bei/bad_end_background_with_environment1.png" alt="Capture 2">
+        <img src="Ning x bei/Bad_End_BeidouNingguang_FINAL.png" alt="Capture 3">
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-global">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Informations légales</h3>
+        <ul>
+          <li><a href="mentions-legales.html">📜 Mentions légales</a></li>
+          <li><a href="conditions.html">⚖️ Conditions d’utilisation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Réseaux</h3>
+        <div class="socials">
+          <a href="https://www.twitch.tv/shiramatsu" target="_blank"><i class="fab fa-twitch"></i></a>
+          <a href="https://www.youtube.com/channel/UCzf33s8QdXsopwJFx_slSSQ" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://x.com/ShiramatsuH" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://discord.gg/DvbWUjva59" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 <b>Shiramatsu</b> | Tous droits réservés | Hébergé sur <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+    </div>
+  </footer>
+
+  <!-- 🔒 Protection & Zoom Popup -->
+  <script>
+  // Protection clic droit / drag / copier
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+
+  // Zoom popup
+  document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const overlay = document.createElement('div');
+    overlay.classList.add('image-popup-overlay');
+    const popupImg = document.createElement('img');
+    const closeBtn = document.createElement('span');
+    closeBtn.classList.add('close-btn');
+    closeBtn.innerHTML = "&times;";
+
+    overlay.appendChild(popupImg);
+    overlay.appendChild(closeBtn);
+    document.body.appendChild(overlay);
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        popupImg.src = img.src;
+        overlay.classList.add('active');
+      });
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay || e.target === closeBtn) {
+        overlay.classList.remove('active');
+      }
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+:root {
+  --violet-fonce: #4A148C;
+  --violet-clair: #B39DDB;
+  --rose: #F8EAF6;
+  --fond: #FFF8F5;
+  --texte: #2B2B2B;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: var(--fond);
+  color: var(--texte);
+}
+
+/* --- HEADER --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, var(--violet-fonce), var(--violet-clair));
+  color: white;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  opacity: 0.8;
+}
+
+/* --- INTRO --- */
+.intro {
+  text-align: center;
+  padding: 100px 20px;
+  background: url("assets/img/bg-sakura-discord.jpg") center/cover no-repeat;
+  color: white;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(74, 20, 140, 0.55);
+}
+
+.intro h1,
+.intro p {
+  position: relative;
+  z-index: 1;
+}
+
+.intro h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* --- VN SECTION --- */
+.vn-section {
+  text-align: center;
+  padding: 70px 40px;
+}
+
+.vn-section h2 {
+  color: var(--violet-fonce);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 40px;
+}
+
+.vn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.vn-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.vn-card:hover {
+  transform: translateY(-6px);
+}
+
+.vn-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.vn-info {
+  padding: 20px;
+}
+
+.vn-info h3 {
+  color: var(--violet-fonce);
+  font-family: "Poppins", sans-serif;
+  margin-top: 0;
+}
+
+.vn-info p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: var(--violet-fonce);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--violet-clair);
+}
+
+/* --- TEAM --- */
+.team {
+  padding: 70px 40px;
+  background: linear-gradient(180deg, var(--rose) 0%, var(--fond) 100%);
+  text-align: center;
+}
+
+.team h2 {
+  color: var(--violet-fonce);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.member-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 230px;
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+}
+
+.member-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.member-card h3 {
+  margin: 10px 0 5px;
+  color: var(--violet-fonce);
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- DISCORD --- */
+.discord {
+  text-align: center;
+  padding: 80px 20px;
+  background: var(--violet-fonce);
+  color: white;
+}
+
+.discord-btn {
+  background: var(--violet-clair);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.discord-btn:hover {
+  background: #d0b4ff;
+}
+
+:root {
+  --violet-fonce: #4A148C;
+  --violet-clair: #B39DDB;
+  --fond: #FFF8F5;
+  --texte: #2B2B2B;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: var(--fond);
+  color: var(--texte);
+  scroll-behavior: smooth;
+  padding-top: 90px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, var(--violet-fonce), var(--violet-clair));
+  color: white;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* --- INTRO --- */
+.intro {
+  text-align: center;
+  padding: 120px 20px 60px;
+  background: url("assets/img/bg-sakura-soft.jpg") center/cover no-repeat;
+  color: white;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(74, 20, 140, 0.45);
+  pointer-events: none;
+}
+
+.intro h1,
+.intro p {
+  position: relative;
+  z-index: 1;
+}
+
+.intro h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* --- MENTIONS --- */
+.mentions {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+}
+
+.mentions h2 {
+  color: var(--violet-fonce);
+  font-family: "Poppins", sans-serif;
+  margin-top: 40px;
+  font-size: 1.4rem;
+}
+
+.mentions p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.mentions a {
+  color: var(--violet-clair);
+  text-decoration: none;
+}
+
+.mentions a:hover {
+  text-decoration: underline;
+}
+
+/* --- FOOTER GLOBAL --- */
+.footer-global {
+  background: linear-gradient(90deg, var(--violet-fonce), var(--violet-clair));
+  color: white;
+  padding: 50px 20px 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center; /* ✅ centré (plus besoin d'espace pour la navigation) */
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--rose);
+}
+
+/* --- RÉSEAUX --- */
+.socials a {
+  color: white;
+  font-size: 1.6rem;
+  margin: 0 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--rose);
+  transform: scale(1.1);
+}
+
+/* --- BAS DE PAGE --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer-bottom a {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .mentions {
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
