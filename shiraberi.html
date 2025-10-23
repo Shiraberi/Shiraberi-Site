@@ -14,15 +14,14 @@
 <body>
   <header class="navbar">
     <div class="logo">🦊 Shiraberi</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="mes-jeux.html">Mes jeux</a>
-      <a href="mes-videos.html">Mes vidéos</a>
-      <a href="shiraberi.html" class="active">Shiraberi</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="lore.html" class="active">Lore</a>
-      <a href="lore.html">Lore</a>
-    </nav>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="mes-jeux.html">Mes jeux</a>
+    <a href="mes-videos.html">Mes vidéos</a>
+    <a href="shiraberi.html">Shiraberi</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="lore.html" class="active">Lore</a>
+  </nav>
   </header>
 
   <main>
@@ -69,32 +68,88 @@
       </div>
     </section>
 
+    <!-- VIDEOS -->
+    <section class="video-section">
+      <h2>📹 Nos vidéos</h2>
+      <div class="video-grid">
+
+        <div class="video-card">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/5X1bYJ1j4yY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <h3>Making of : Tartaglia x Zhongli</h3>
+          <p>Découvrez les coulisses de la création de notre visual novel Tartaglia x Zhongli, de l'écriture du scénario à la conception des personnages.</p>
+        </div>
+        
+        <div class="video-card">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3bXw6YI6k1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <h3>Présentation : Beidou x Ningguang</h3>
+          <p>Plongez dans l'univers de notre visual novel Beidou x Ningguang et découvrez les personnages, l'intrigue et les inspirations derrière cette romance captivante.</p>
+        </div>
+
+        <div class="video-card">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3bXw6YI6k1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <h3>Présentation : Ryuichi x Adahm</h3>
+          <p>Plongez dans l'univers de notre visual novel Ryuichi x Adahm et découvrez les personnages, l'intrigue et les inspirations derrière cette romance captivante.</p>
+        </div>
+
+      </div>
+      <div class="video-pagination">
+        <a href="#" class="btn">Voir plus de vidéos</a>
+      </div>
+
+    </section>
+
+
+
     <!-- MEMBRES -->
     <section class="team">
       <h2>👥 L’équipe Shiraberi</h2>
       <div class="team-grid">
-        <div class="member-card">
-          <img src="Images/Shiramatsu.png" alt="Shiramatsu">
-          <h3>Shiramatsu</h3>
-          <p>Fondateur<br>développeur Ren’Py & Unity.</p>
-        </div>
+<div class="member-card hover-popup">
+  <div class="member-image">
+    <img src="Images/Shiramatsu.png" alt="Shiramatsu">
+    <div class="hover-info">
+       <h3>Shiramatsu</h3>
+      <a href="Shiramatsu.html" class="btn violet">Voir la fiche complète</a>
+    </div>
+    <p>Fondateur<br>développeur Ren’Py & Unity.</p>
+  </div>
+</div>
 
-        <div class="member-card">
-          <img src="Images/CelJack.png" alt="Cel'Jack">
-          <h3>Cel'Jack</h3>
-        <p>Scénariste.<br>Responsable du ton narratif📖</p>
-        </div>
 
-        <div class="member-card">
-          <img src="Images/Baekxia.png" alt="Baekxia">
-          <h3>Baekxia</h3>
-          <p>Artiste & illustrateur.<br>Travaille sur les designs des personnages. 🎨</p>
-        </div>
 
-        <div class="member-card">
-          <img src="Images/Jascylira.png" alt="Jascylira">
-          <h3>Jascylira</h3>
-          <p>Compositeur & sound designer.<br>Donne vie à nos univers par la musique. 🎵</p>
+<div class="member-card hover-popup">
+  <div class="member-image">
+    <img src="Images/CelJack.png" alt="Cel'Jack">
+    <div class="hover-info">
+      <h3>Cel'Jack</h3>
+      <a href="celjack.html" class="btn violet">Voir la fiche complète</a>
+    </div>
+    <p>Scénariste<br>Responsable du ton narratif 📖</p>
+  </div>
+</div>
+
+
+<div class="member-card hover-popup">
+  <div class="member-image">
+   <img src="Images/Baekxia.png" alt="Baekxia">
+    <div class="hover-info">
+        <h3>Baekxia</h3>
+      <a href="Baekxia.html" class="btn violet">Voir la fiche complète</a>
+    </div>
+    <p>Artiste & illustrateur.<br>Travaille sur les designs des personnages. 🎨</p>
+  </div>
+</div>
+
+<div class="member-card hover-popup">
+  <div class="member-image">
+   <img src="Images/Jascylira.png" alt="Jascylira">
+    <div class="hover-info">
+         <h3>Jascylira</h3>
+      <a href="jas.html" class="btn violet">Voir la fiche complète</a>
+    </div>
+    <p>Compositeur & sound designer.<br>Donne vie à nos univers par la musique. 🎵</p>
+</div>
+           
         </div>
       </div>
     </section>
@@ -139,6 +194,25 @@
   </div>
 </footer>
 
+<script>
+// ouverture du popup au clic
+document.querySelectorAll('.member-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const memberName = card.querySelector('h3').textContent.trim().toLowerCase().replace("'", "");
+    const popup = document.getElementById('popup-' + memberName);
+    if (popup) popup.classList.add('active');
+  });
+});
+
+// fermeture (clic sur ✕ ou en dehors)
+document.querySelectorAll('.popup').forEach(popup => {
+  popup.addEventListener('click', e => {
+    if (e.target.classList.contains('close-btn') || e.target === popup) {
+      popup.classList.remove('active');
+    }
+  });
+});
+</script>
 
 </body>
 </html>

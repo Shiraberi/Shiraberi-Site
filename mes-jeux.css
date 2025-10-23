@@ -136,8 +136,8 @@ body {
 .tags {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* ✅ centre horizontalement */
-  gap: 8px;                /* ✅ espace entre badges */
+  justify-content: center; 
+  gap: 8px;                
   margin-bottom: 15px;
   padding: 0 5px;
 }
@@ -148,7 +148,7 @@ body {
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 0.85rem;
-  white-space: nowrap; /* ✅ empêche les retours à la ligne */
+  white-space: nowrap; 
 }
 
 /* --- CARD FOOTER --- */
