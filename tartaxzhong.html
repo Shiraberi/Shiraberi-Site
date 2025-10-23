@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Titre du jeu | Shiraberi</title>
+  <title>Révélation dans les onsen | Shiraberi</title>
   <link rel="stylesheet" href="modele-jeu.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/2e5f77a4a4.js" crossorigin="anonymous"></script>
@@ -14,22 +14,23 @@
 <body>
   <!-- NAVIGATION -->
   <header class="navbar">
-    <div class="logo">🦊 Shiraberi</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="mes-jeux.html">Mes jeux</a>
-      <a href="shiraberi.html" class="active">Shiraberi</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="lore.html" class="active">Lore</a>
-    </nav>
+  <div class="logo"> <img src="Images/HIWA_LOGO_250x150px_w_border.png" alt="logo" height="90px">Shiramatsu</div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="mes-jeux.html">Mes jeux</a>
+    <a href="mes-videos.html">Mes vidéos</a>
+    <a href="shiraberi.html">Shiraberi</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="lore.html" class="active">Lore</a>
+  </nav>
   </header>
 
   <!-- HERO / BANNIÈRE -->
   <section class="hero">
-    <img src="Images/ban-tarta-zhong.png" alt="Bannière du jeu">
+    <img src="Images/tarta_zhong_in_game.png" alt="Bannière du jeu">
     <div class="overlay">
-      <h1>Titre du Visual Novel</h1>
-      <p>“Une phrase d’accroche poétique ou une citation du jeu.”</p>
+      <h1>Révélation dans les onsen</h1>
+      <p>“Secret et attirance se reflètent sous la lune.”</p>
     </div>
   </section>
 
@@ -39,27 +40,29 @@
       <div class="info">
         <h2>Résumé</h2>
         <p>
-          Ce visual novel raconte l’histoire de <b>[Nom des personnages]</b>, deux âmes liées par le destin.
-          Inspiré du folklore japonais et des émotions humaines, le jeu propose une expérience narrative
-          immersive accompagnée d’une bande-son originale.
+          Un soir à Liyues, non loin de la vallons Chenyu, deux âmes se rencontrent dans un onsen.
+          Entre discussions légères et confidences, une connexion inattendue se forme.
+          Plongez dans cette histoire courte où chaque regard et chaque mot échangé dévoilent des émotions profondes.
         </p>
 
         <ul class="details">
-          <li><b>Durée :</b> 30 min environ</li>
+          <li><b>Durée :</b> 10 min environ</li>
           <li><b>Langue :</b> Français / Anglais</li>
           <li><b>Genre :</b> Romance, Drame, Slice of Life</li>
           <li><b>Développeur :</b> Équipe Shiraberi</li>
+          <li><b>Plateforme :</b> Navigateur web</li>
+          <li><b>Chapitres :</b> 1</li>
         </ul>
 
-        <a href="https://exemple-jeu-web.com" target="_blank" class="play-btn">
+        <a href="TrataxZhong/1112_Révélation_au_onsen_ZXT-0.12-web/index.html" target="_blank" class="play-btn">
           <i class="fa-solid fa-play"></i> Jouer en ligne
         </a>
       </div>
 
       <div class="gallery">
-        <img src="Images/scene1.png" alt="Capture 1">
-        <img src="Images/scene2.png" alt="Capture 2">
-        <img src="Images/scene3.png" alt="Capture 3">
+        <img src="Images/scene_Tarta_x_Zhong00.png" alt="Capture 1">
+        <img src="Images/scene_Tarta_x_Zhong01.png" alt="Capture 2">
+        <img src="Images/tarta_zhong_in_game.png" alt="Capture 3">
       </div>
     </section>
   </main>
@@ -94,5 +97,43 @@
     <p>© 2025 <b>Shiramatsu</b> | Tous droits réservés | Site hébergé sur <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
   </div>
 </footer>
+
+ <!-- 🔒 Protection & Zoom Popup -->
+  <script>
+  // Protection clic droit / drag / copier
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+
+  // Zoom popup
+  document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const overlay = document.createElement('div');
+    overlay.classList.add('image-popup-overlay');
+    const popupImg = document.createElement('img');
+    const closeBtn = document.createElement('span');
+    closeBtn.classList.add('close-btn');
+    closeBtn.innerHTML = "&times;";
+
+    overlay.appendChild(popupImg);
+    overlay.appendChild(closeBtn);
+    document.body.appendChild(overlay);
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        popupImg.src = img.src;
+        overlay.classList.add('active');
+      });
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay || e.target === closeBtn) {
+        overlay.classList.remove('active');
+      }
+    });
+  });
+  </script>
+
 </body>
 </html>

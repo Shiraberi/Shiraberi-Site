@@ -50,7 +50,7 @@
           <li><b>Langue :</b> Français</li>
           <li><b>Genre :</b> Romance, Drame, Slice of Life, R18, SMUT</li>
           <li><b>Développeur :</b> Équipe Shiraberi</li>
-          <li><b>Disclaimer :</b> Les personnages sur les image sont des placehorder</li>
+          <li><b>Disclaimer :</b> Les personnages sur les image sont des placeholder</li>
         </ul>
 
   
@@ -97,6 +97,43 @@
     <p>© 2025 <b>Shiramatsu</b> | Tous droits réservés | Site hébergé sur <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
   </div>
 </footer>
+
+ <!-- 🔒 Protection & Zoom Popup -->
+  <script>
+  // Protection clic droit / drag / copier
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+
+  // Zoom popup
+  document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.gallery img');
+    const overlay = document.createElement('div');
+    overlay.classList.add('image-popup-overlay');
+    const popupImg = document.createElement('img');
+    const closeBtn = document.createElement('span');
+    closeBtn.classList.add('close-btn');
+    closeBtn.innerHTML = "&times;";
+
+    overlay.appendChild(popupImg);
+    overlay.appendChild(closeBtn);
+    document.body.appendChild(overlay);
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        popupImg.src = img.src;
+        overlay.classList.add('active');
+      });
+    });
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay || e.target === closeBtn) {
+        overlay.classList.remove('active');
+      }
+    });
+  });
+  </script>
 
 </body>
 </html>
