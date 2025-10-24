@@ -331,10 +331,6 @@ body {
     text-align: center;
   }
 }
-@media (max-width: 1200px) {
-  .nav-links { gap: 12px; }
-  .nav-links a { font-size: 0.95rem; }
-}
 
 @media (max-width: 1040px) {
   .nav-links { gap: 10px; }
