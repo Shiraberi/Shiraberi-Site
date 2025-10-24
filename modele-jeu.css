@@ -302,6 +302,20 @@ img {
   text-decoration: underline;
 }
 
+/*filigrane semi-transparent*/
+
+.image-zoom-overlay::after {
+  content: "© Shiramatsu - Interdit à la reproduction";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .footer-content {
