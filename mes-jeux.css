@@ -12,11 +12,11 @@ body {
   background-color: var(--fond);
   color: var(--texte);
   scroll-behavior: smooth;
-  padding-top: 90px; /* ✅ espace réservé à la navbar fixe */
+  /*padding-top: 90px;  ✅ espace réservé à la navbar fixe */
   overflow-x: hidden;
 }
 
-/* --- HEADER --- */
+/* --- Header --- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -24,12 +24,8 @@ body {
   background: linear-gradient(90deg, var(--violet-fonce), var(--violet-clair));
   color: white;
   padding: 15px 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  position: relative;     
+  z-index: 10;           
 }
 
 .logo {
@@ -50,6 +46,59 @@ body {
 .nav-links a.active {
   opacity: 0.8;
 }
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  background: url("assets/img/bg-sakura.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: rgba(74, 20, 140, 0.4);
+  pointer-events: none;  /* ✅ empêche la couche de bloquer les clics */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: var(--rose);
+  color: var(--violet-fonce);
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
 
 /* --- INTRO --- */
 .intro {
@@ -179,28 +228,80 @@ body {
   background: var(--violet-clair);
 }
 
-/* --- FOOTER --- */
-footer {
-  background: var(--violet-fonce);
+/* --- FOOTER GLOBAL --- */
+.footer-global {
+  background: linear-gradient(90deg, var(--violet-fonce), var(--violet-clair));
   color: white;
+  padding: 50px 20px 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto 30px;
   text-align: center;
-  padding: 25px 10px;
 }
 
-footer a {
-  color: var(--violet-clair);
-  text-decoration: none;
+.footer-section h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 5px;
 }
 
-.socials a {
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section a {
   color: white;
-  margin: 0 10px;
-  font-size: 1.3rem;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
+.footer-section a:hover {
+  color: var(--rose);
+}
+
+/* --- RÉSEAUX --- */
+.socials a {
+  color: white;
+  font-size: 1.6rem;
+  margin: 0 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
 .socials a:hover {
-  color: var(--violet-clair);
+  color: var(--rose);
+  transform: scale(1.1);
+}
+
+/* --- BAS DE PAGE --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer-bottom a {
+  color: var(--rose);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
 }
 
 /* --- RESPONSIVE --- */
@@ -236,5 +337,27 @@ footer a {
 
   .game-info h2 {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1040px) {
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 0.9rem; }
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
