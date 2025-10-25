@@ -332,6 +332,8 @@ body {
   }
 }
 
+/* --- NAVBAR RESPONSIVE --- */
+
 @media (max-width: 1040px) {
   .nav-links { gap: 10px; }
   .nav-links a { font-size: 0.9rem; }
