@@ -1,5 +1,6 @@
 :root {
   --violet-fonce: #4A148C;
+  --noir: #000000;
   --violet-clair: #B39DDB;
   --rose: #F8EAF6;
   --fond: #FFF8F5;
@@ -218,14 +219,14 @@ body {
   margin-bottom: 20px;
 }
 
-.socials a {
+.contact a {
   color: var(--violet-fonce);
   margin: 0 10px;
   font-size: 1.6rem;
   transition: color 0.3s ease;
 }
 
-.socials a:hover {
+.contact a:hover {
   color: var(--violet-clair);
 }
 
@@ -276,14 +277,14 @@ body {
 }
 
 /* --- RÉSEAUX --- */
-.socials a {
+.contact a {
   color: white;
   font-size: 1.6rem;
   margin: 0 8px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.socials a:hover {
+.contact a:hover {
   color: var(--rose);
   transform: scale(1.1);
 }
@@ -304,6 +305,21 @@ body {
 .footer-bottom a:hover {
   text-decoration: underline;
 }
+
+/*--- font awesome ---*/
+.contact a i {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact a i:hover {
+  background: rgb(255, 255, 255);
+  color: var(--violet-fonce);
+  transform: scale(1.1);
+}
+
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
